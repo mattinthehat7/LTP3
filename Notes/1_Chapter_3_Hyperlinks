@@ -1,0 +1,52 @@
+Internal Hyperlinks
+    <a href="LINK"> TEXT </a>
+    *link can be the html file name (name.html)
+    
+    *Do not have a page that do not link anywhere (deadend)
+    *add a link that goes back
+    *href is an attribute
+    
+    <p><a href="LINK">TEXT</a></p>
+    
+    *IF THERE IS A FOLDER
+        CREATE A PATH --foldername/filename.html = a path
+            <p><a href="foldername/filename.html">TEXT</a>
+            
+        Back to links...
+        *../ = UP A LEVEL!!
+        
+        <a href="../filename.html">Back</a>
+        
+External Hyperlinks
+    <a href="url">TEXT</a>
+    
+    *http = protocol (hyper text transfer protocol)
+    *subdomain = www.
+    *domain = domain
+    *.com = domain extension
+    
+Target Attribute
+
+    Target where the resulting link will appear for the user -- be careful of pop-up blockers
+    <a target="_blank" href="LINK">
+        --> load in a new window or tab
+    
+    target="_blank" --> new window
+    target="_self" --> load in same window (this is the default)
+    
+    also some features that work with frames --> usually not used except for iframes --> don't work well than mobile
+    
+    may see parent or top
+        will want to change to blank or self
+        Top will load it into full window and get rid of the frames, bust frames that are there
+        
+Anchors to navigate long pages (sometimes called bookmarks) - pages with sections --> create "name anchors"
+    
+    Step 1 = make a book mark
+    <a name="give a name"></a> (anchor tag with name attribute)
+    *don't want anything in between the tags because then it will make a link
+    
+    Step2 = make the links that people will use
+        --> top or bottom of page add links with text that will create some links to the sections
+        
+        <a href="#use_anchor_name">LINK TEXT</a>

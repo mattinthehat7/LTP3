@@ -1,0 +1,89 @@
+Some notes
+
+Standard Format
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title> TITLE </head>
+        </head>
+        <body>
+        
+        </body>
+    </html>
+
+Break Tags
+    <br/>
+    
+Paragraph Tags
+    <p>
+
+Preformatted Text
+    Where you want the text to appear just like it does in the code
+    Use the <pre> </pre> tags
+    Isn't used much anymore -- gives monospaced font (each text gives same amount of space)
+    
+If you want to create multiple spaces you can use a non-breaking space
+    &nbsp; will create a space everytime you put one there
+    
+Heading Tags (can have six levels with html5)
+    h1 = most important
+    -->
+    h6
+    
+Lists
+    Ordered Lists (numbers)
+        <ol> (ordered list)
+            <li> (list item)
+    
+    Unordered Lists (bulleted)
+        <ul> unordered lists
+            <li> list item tag
+            
+    Unordered Lists have type attributes <ul type="square"> -- changes icon before list
+        i. square, circle, disc
+        
+    Ordered lists have type attributes <ol type="">
+        A, a, I, i, start
+        
+*MORE THAN ONE ATTRIBUTE - JUST ADD A SPACE
+    <ol type="A" start="13">
+    
+Quotations and Citations
+    <blockquote> -- taking content from another source
+    --offsets from other text
+    -- inside blockquote use <cite> tag
+    
+Text Formatting
+    <em> = emphasis 
+    <strong> = stronger than the text around it
+    em vs. strong = emphasis = italics, strong = bold
+    
+    There is bold tag = <b>
+    There is italics tag = <i>
+    They aren't used anymore!
+    
+    Highlight or mark
+    <mark> = highlight
+    <del> = delete = strikethrough text
+    <ins> = insert = underline
+    <sub> = subscript tag
+    <sup> = superscript
+    
+Computer Code
+    <code> = default the code tag displays the output in a monospaced font to look like computer code, can't put in just code --> if you want to add p tags it still processes the tags and doesn't display them as you want
+    --> use character entities --> codes that represent the greater than and less than sign
+    
+    &lt; = less than sign
+    &gt; = greater than sign
+    
+    so to show <code><p> would be &lt;p&gt;Hellow World &lt;/p&gt;</code>
+    
+Containers
+    <div> (div is an element block-line (which is equivalent to having a line-break before and after it))
+    <span> (inline usually used for a small chunk of html inside a line (such as inside a paragraph))
+    --> new
+    <article> <aside> <details> <figure> <figcaption> <header> <footer> <main> <nav> <section> <summary> <mark> <output> <menu> <progress> <meter>
+    --> purpose of html5 is to better define 
+    
+    
+    
