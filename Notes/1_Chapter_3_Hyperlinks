@@ -43,6 +43,7 @@ Target Attribute
 Anchors to navigate long pages (sometimes called bookmarks) - pages with sections --> create "name anchors"
     
     Step 1 = make a book mark
+    
     <a name="give a name"></a> (anchor tag with name attribute)
     *don't want anything in between the tags because then it will make a link
     

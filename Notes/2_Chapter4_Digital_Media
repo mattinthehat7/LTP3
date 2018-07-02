@@ -1,0 +1,60 @@
+RIA (rich internet applications)
+
+Images and Image Links
+
+    <img src="/images/logo.jpg /> --> 
+
+    <img src="/images/logo.jpg" alt="LearToProgram Logo" /> 
+
+    *NOTE THE SHORTCUT CLOSE (final / at the end)
+
+    *IMAGES WILL BE IN DIFFERENT FOLDER --> create path to images folder
+    *attributes ==> alt="learntoprogram logo" --> can read alt text to visually impaired, also helps search engines, gives them a better idea of the content on the page
+    *Images are inline so they are treated like they are text --> use a BREAK to separate the images
+
+    Image links --> same process as text
+
+    FULL EXAMPLE
+        <p><a href="https://www.trumbull-ct.gov/"><img src="images/Trumbull.jpg" alt="Trumbull, CT /></a><br/>Trumbull, CT</p>
+
+        *can move the </a> later to include the text
+
+Image and Image Sizes
+
+    *When selecting a width in html you can directly set the width in pixels or the percentage of the width of the parent element or the screen
+
+    <img src="lake.jpg" width="100%" alt="Boat on a lake"/>
+
+Sizing Images Responsively
+
+    ADD CSS STYLING (Will set image to be 100% size regardless of browser size)
+    *PUT THIS STYLE CSS IN HEAD
+    
+    <style> 
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    
+    <img src="images/nature.jpg" alt="Nature Photo" />
+    
+    ^^ above is for large image 
+    *for a smaller image do a MAX WIDTH FEATURE --> say 25%
+    
+    HTML 5 Has Picture element --> can select images based on the screen width
+    
+    <body>
+        <picture>
+            <source srcset="images/trees.jpg" media="(max-width:400px)">
+            *this will only be shown on screen that are 400px or less
+            *will display next one if criteria not met
+            <source srcset="images/nature.jpg">
+            <img src="images/nature.jpg"> * THIS IS TRADITIONAL FOR FALLBACK
+            
+            *not used in all browsers yet
+            
+Audio Files
+    
+            
+
