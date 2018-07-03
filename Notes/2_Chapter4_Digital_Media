@@ -60,5 +60,27 @@ Audio Files
     </audio>
     
     Don't use AUTOPLAY because it's annoying to the user
+    
+    
+Video Files (remember tags vs attributes)
+    *same pattern as audio files
+    <video controls="controls">
+        <source src="sample.mp4" />
+    </video>
+    
+    * to change the size of the video
+    <video controls="controls" width="640"
+    
+    
+    only way -->
+        IN THE HEAD <style> 
+        #cartoon 
+        {
+            width: 640px;
+        }
+        </style> 
             
+        <video id="cartoon" controls="controls" autoplay="autoplay">
+            <source src="sample.mp4" />
+        </video>
 
