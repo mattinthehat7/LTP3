@@ -55,6 +55,10 @@ Sizing Images Responsively
             *not used in all browsers yet
             
 Audio Files
+    <audio controls="controls" autoplay="autoplay"> (controls gives you the browswers audio player) 
+        <source src="Rhapsody.mp3" /> //source = tag, src = attribute
+    </audio>
     
+    Don't use AUTOPLAY because it's annoying to the user
             
 
