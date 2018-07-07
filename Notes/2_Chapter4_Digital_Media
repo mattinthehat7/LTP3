@@ -9,7 +9,9 @@ Images and Image Links
     *NOTE THE SHORTCUT CLOSE (final / at the end)
 
     *IMAGES WILL BE IN DIFFERENT FOLDER --> create path to images folder
+    
     *attributes ==> alt="learntoprogram logo" --> can read alt text to visually impaired, also helps search engines, gives them a better idea of the content on the page
+    
     *Images are inline so they are treated like they are text --> use a BREAK to separate the images
 
     Image links --> same process as text
