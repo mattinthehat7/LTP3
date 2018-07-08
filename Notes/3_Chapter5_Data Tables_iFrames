@@ -1,2 +1,101 @@
 Defining a Table
+    <table>
+        <tr> = table row 
+            <td> = table data </td> <td> </td>
+        </tr>
+    </table>
     
+    Example
+    
+    <table>
+        <tr>
+            <td>Song</td><td>Artist</td><td>Rating</td>
+        </tr>
+        <tr>
+            <td>Faithfully</td><td>Journey</td><td>*****</td>
+        </tr>
+        repeat...
+    </table>
+    
+    
+  Table Borders
+    <table border="1" cellspacing="0" cellspacing="5"> 
+        --> border number = thickness of border, by default has 3d wedge effect, has old effect
+        --> cell spacing = inbetween cells = weird usually set to 0
+        --> cell padding = good space in cells
+        
+        *Frequently you will not see these attributes in the html -- you will see in css stylesheet
+        
+        <style>
+        table, tr, td 
+            {
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+            *adding tr and td optional
+            *css is the more contemporary way
+            
+    Table Width and Cell Width
+        *help to make tables more responsive!
+        
+        *understand how the table is rendered without specifying -- width of table stays the same depsite browser change
+        
+        <style>
+            {
+                width: 100%;
+            }
+            table, tr, td
+            {
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+        
+        *now will be responsive to 100% of browser window
+        *can put in the table element <table width="100%"> *but this is less professional
+        
+        *can also set width within specific table datas
+            <table>
+                <tr>
+                    <td width="50%"> Data </td>
+                </tr>
+            </table>
+            
+            *or <td width="200px"> Data </td> so this will keep one section of the table the same with the total table responsive if in the style sheet the width is 100%
+            
+    Defining Table Headers
+        <table>
+            <tr>
+                <th width="50%> Song </th>
+            </tr>
+        </table>
+        
+        *th = table header --> you get no borders between and labels became bold and were centered over the column they are heading, if we want the solid border must add th tag in the style sheet
+        
+            <style>
+                table
+                {
+                    width: 100%;
+                }
+                table, tr, td, th <-- add th tag to rules for table
+                {
+                    border: 2px solid black;
+                    border-collapse: collapse;
+                }
+                th <-- separate out because the formatting is differentiated from the other format in the table data, so add own formatting if we wanted
+                {
+                    background-color: black;
+                    color: white; <-- = text color
+                }
+        
+    Spanning Multiple Rows and Content
+        *situation where we want to combine a cell 
+            --> rowspan tag (number = spans number of rows up to down)
+            --> colspan tag (number = spans number of columns left to right)
+            
+            <td rowspan="2> Data </td>
+            
+            *will need to delete the section below
+            
+    Inserting iFrame content
+        
