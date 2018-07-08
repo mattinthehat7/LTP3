@@ -93,9 +93,45 @@ Defining a Table
             --> rowspan tag (number = spans number of rows up to down)
             --> colspan tag (number = spans number of columns left to right)
             
-            <td rowspan="2> Data </td>
+            <td rowspan="2"> Data </td>
             
             *will need to delete the section below
             
     Inserting iFrame content
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>iframe</title>
+            </head>
+            <body>
+                <h1>The Web Dev Show Title</h1>
+                <iframe width="853" height="480" src="https://example.com" frameborder="0" allowfullscreen></iframe>
+                <p> From <a href="https://learntoprogram.tv">LearnToProgram</a></p>
+            </body>
+        </html>
+        
+    Adding a Table Caption
+    <table>
+        <caption> Example Caption Above Table </caption>
+        <tr>
+            <th width="50%">Song</th><th>Artist</th><th>Rating</th>
+        </tr>
+        <tr>
+            <td>Faithfully</td> etc...
+            
+        can add custom caption data in css
+        
+        <style>
+        caption
+        {
+            color: red;
+            font-weight: bold;
+        }
+        </style>
+        
+        
+        
+        
+        
+        
         
