@@ -19,7 +19,7 @@ Defining a Table
     
     
   Table Borders
-    <table border="1" cellspacing="0" cellspacing="5"> 
+    <table border="1" cellspacing="0" cellpadding="5"> 
         --> border number = thickness of border, by default has 3d wedge effect, has old effect
         --> cell spacing = inbetween cells = weird usually set to 0
         --> cell padding = good space in cells
