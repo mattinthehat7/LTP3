@@ -1,0 +1,55 @@
+Defining The Form
+    <form action="#" method="post"> //must have two attributes 1. ACTION - this is another url that processes the form (php or node.js or python).. may add to database, may create and send an email -- need a whole url that processes a form (formprocess.php) *# = we don't have an action
+    
+    2. METHOD = 1. POST 2. GET
+        Post - sent in http headers to whatever is marked in the action; http headers are parts of a document that aren't seen, but that are processed by the browser
+        
+        Get - everything the user types becomes part of the url as a query strong - example - www.learntoprogram.tv/?first=Mark&last=Lassoff
+        Post is most common
+        
+        Get is NOT SECURE
+        
+    </form>
+    
+    
+Text Input
+    <form action="#" method="post">
+        <label for="first">First</label> //for links it to a specific form element
+        <input type="text" id="first" name="first" />
+        
+        
+        //id is the link to the label, the name is how whatever is typed is labeled when it is sent to the server based on whatever value we have as the action
+        
+        <br/>
+        
+        <label for="last">Last</label>
+        <input type="text" id="last" name="last" />
+        
+        <br/>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="last" />
+        
+        //email type gives special email keyboard on mobile
+        
+        <label for="phone">Phone</label>
+        <input type="phone" id="phone" placeholder ="Phone Number" />
+        
+        //Placeholder puts some info in there already to know what you are supposed to type
+        
+        
+        //For larger text
+        
+        <label for="bio">Biography</label>
+        <textarea id="bio>This text is default text -- example, type your biography here</textarea>
+    
+    </form>
+    
+        //use css to style
+        
+        <style>
+            #bio
+                {
+                    width: 300px;
+                    height: 200px;
+                }
+        </style>
