@@ -53,3 +53,97 @@ Text Input
                     height: 200px;
                 }
         </style>
+        
+        
+Limiting Text Input
+    Prevent errors and security problems
+    
+    1. Make a field required so a user cant leave it blank
+    
+    <input type="text" id="first" name="first" required="required" />
+    
+    2. Maximum number of characters and autocomplete (if off it can help prevent user error)
+    
+    <input type="text" id="first" name="first" maxlength="25" autocomplete="off" />
+    
+    3. Less errors --> Give user suggestions as to what they can put in, create data list -- This will give you potential autocompletes, can prevent spelling errors, or show type of data you want here -- MUST ASSIGN LIST IN INPUT THEN USE THE ID IN DATA LIST
+    
+    <input type="text" input id="bands" placeholder="Band Name" list="myBands" />
+        <datalist id="myBands">
+            <option value="Journey" />
+            <option value="REO Speedwagon />
+            <option value="Styx" />
+            <option value="Heart" />
+            <option value="Rush" />
+        </datalist>
+        
+Multiple Choice
+    Three ways to do this
+        1. Checkbox (one, some, or all options presented)
+            a. EACH NAME MUST BE THE SAME EACH VALUE MUST BE DIFFERENT
+            value is returned to the server if this particular option is selected so each value must be different and each name must be the same
+        
+    <label id="bands">Bands You Like</label><br/>
+    <input type ="checkbox" name="bands" value="Journey" />Journey<br/>
+    <input type ="checkbox" name="bands" value="REO" />REO Speedwagon<br/>
+    <input type ="checkbox" name="bands" value="Foreigner" />Foreigner<br/>
+    <input type ="checkbox" name="bands" value="Heart" /> Heart<br/>
+    <input type ="checkbox" name="bands" value="Scandal" />Scandal<br/>
+    
+    2. Radio Button - Several options but only one is appropriate
+        a. name is how they are grouped so must be the same - value is what is returned by the server and processed by the form action and method
+        b. we can use checked attribute to assign a default
+    
+    <label id="gender">Gender</label>
+    <input type="radio" name="gender" value="Male">Male<br/>
+    <input type="radio" name="gender" value="off">Female<br/>
+    <input type="radio" name="gender" value="other" checked="checked">Other<br/>
+    
+    3. Select box - size attribute = scrolling box; multiple attribute helps you can select with control button or shift button
+    
+    <select id="state" size="5" multiple="multiple">State</label>
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Connecticut">Connecticut</option>
+        <option value="Florida">Florida</option>
+        <option value="Illinois">Illinois</option>
+    </select><br/>
+        
+Form Submission
+    INSIDE FORM TAGS -- ADD SUBMIT BUTTON
+        1. Older way - whatever we put in value will put writing in the button
+            <input type="submit" value="Send Form" />
+        2. Newer way - button tag
+            <button type="submit">Send Form</button>
+        3. Second type of button is the reset button = allows user to reset a form so there is nothing written in it
+            <button type="reset">Reset</button>
+            
+            
+Generic Buttons
+    make buttons that do just about anything
+    
+    <head>
+        <title>Generic Buttons</title>
+       
+       //javascript
+        <script>
+            window.onload=function()
+            {
+                document.getElementById('btnAlert').addEventListener('click'), alertMe, false);
+            }
+            
+            function alertMe()
+            {
+                alert("Greetings!");
+            }
+    </head>
+    
+        //html for the button the id attribute hooks it up to javascript if you identify the id
+    <body>
+        <button id="btnAlert">Alert Me</button>
+    </body>
+    
+    Old style in html button tag can add attribute onclick="alertMe()"
+            
+
+        
