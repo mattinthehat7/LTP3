@@ -2,14 +2,21 @@
 <html>
     <head>
         <title>Lab 6</title>
+        <style>
+            #comments
+            {
+                height: 80px;
+                width: 400px;
+            }
+        </style>
     </head>
     <body>
         <form action="#" method="post">
-            <label for="first">First Name</label>
-            <input type="text" id="first" name="first" />
+            <label for="first">Patient First Name</label>
+            <input type="text" id="first" name="first" /> &nbsp;
             
-            <label for="last">Last Name</label>
-            <input type="text" id="last" name="last" />
+            <label for="last"> Patient Last Name</label>
+            <input type="text" id="last" name="last" /> <br/><br/>
             
             <label for="dob">Birth Date</label>
             <input type="date" id="dob" />
@@ -401,12 +408,18 @@
                 <input type="radio" name="q78r" value="Yes" />Yes
                 <input type="radio" name="q78r" value="No" />No
                 <input type="text" id="q78r" name="explain1" /> &nbsp; <br/> 
-            </fieldset>
+            </fieldset> <br/>
             
+            <label for="comments">Comments:</label><br/>
+            <textarea id="comments"></textarea> <br/><br/>
             
+            <p>To the best of my knowledge, the questions on this form have been accurately answered. I understand that providing incorrect information can be dangerous to my (or patient's) health. It is my responsibility to inform the dental office of any changes in medical status.</p><br/>
             
+            <label for="signature">Signature of PATIENT, PARENT, or GUARDIAN</label>
+            <input type="text" id="signature" name="signature" />
             
-            
+            <label for="dateofsignature">Date</label>
+            <input type="date" id="dateofsignature" name="dateofsignature" />         
         </form>
     </body>
 </html>
