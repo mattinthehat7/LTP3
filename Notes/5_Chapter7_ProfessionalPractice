@@ -1,0 +1,35 @@
+Commenting your Code
+    Comments are for documentation
+    
+    <!--
+    
+    These are the comment tags - note to self or other developers - or a note to do something later
+    
+    -->
+    
+    Good coding practice indicates that you have comments in your code
+    
+    Can use them to comment out a part of the code that we don't want to show -- can be useful for debugging
+    
+Meta Tags
+    
+    Where Google and other search engines get information they use about your page
+    
+    No visible effect on the output of the browser -- used to index the page
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Meta Tags</title>
+            <meta name="description" content="HTML5 Specialists work in professional development environments. Become an HTML5 expert and get certified!" />
+            <meta name="author" content="Mark Lassoff" />
+            
+            <!-- keywords are not used very much anymore -->
+            <meta name="keywords" content="html5, lessons, tutorial" />
+        </head>
+        <body>
+        </body>
+
+    </html>
+    
+    GOOGLE has a page that will show you what meta tags it uses to crawl websites -- meta tags that google understands
