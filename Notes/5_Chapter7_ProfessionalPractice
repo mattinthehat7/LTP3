@@ -64,6 +64,107 @@ Inserting an external library to make mobile optimization called JQUERY
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         
 Search Engine Readiness
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>HTML5 Tutorials: New Projexts to help you learn HTML5</title>
+            
+            <!-- use your primary title keywords in the description -->
+            
+            <meta name="description" content="HTML5 tutorials to help you learn new HTML5 skills. Tutorials are fun and interactive." />
+            
+            <!-- tell google that the content of the page is actually about the title; the file name of the url is easy for google to understand too so this could be blog.learntoprogram.tv/html5_tutorials.html ; this helps google understand -->
+            
+        </head>
+        <body>
+            <!-- add alt atributes to images -->
+            <img src="Mark.jpg" alt="HTML5 Tutorials Instructor Mark Lassoff" />
+            <!-- use keywords in heading tags and your content; so make sure the keywords appear in heading tags and in content appear more than once -->
+            <h1>HTML5 Tutorials</h1>
+            <p> This page has five HTML5 Tutorials.</p>
+        </body>
+    </html>
     
+    <!-- last thing is about links; be sure to have internal linking in the site and encourage sites to link back to you -->
+    
+It's A Colorful World
+    HTML5 has 16.5 million colors to use
+    In photoshop color picker feature lets you pick a color for your image -- a number of different ways to describe color in imaging -- hue, saturation and brightness, RGB anywhere between 0 and 255, CMYK is for PRINTING INKS and then lab colors. The web colors are HEX colors
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Colors</title>
+            <style>
+                #colorMe
+                {
+                    height: 600px;
+                    width: 400px;
+                    background-color: red;
+                }
+            </style>
+        </head>
+        <body>
+        
+            <!-- logical division that is set in the style section; we used a named color "red", we can also use RGB "rgb(0,255,0);" we can also use HEX "#ff0000" Note: this is also red green blue, but expressed 00 and f is 16 so 255 (256, 255 is max) is ff that  -->
+            
+            <div id="colorMe"></div>
+        </body>
+    </html>
+    
+Identifying HTML5 API's
+    More complex javascript components - some important ones to be aware of
+    
+    API = application programming interface -- ways for unrelated bits of programming to work together through a shared set of expectations
+    
+    1. Drag and Drop
+    2. Web Workers -- allows background processing in javascript
+    3. Web storage API - convenient ways for web browsers to store data
+    4. Web sockets - made chat based apps possible -- direct connections between web browsers and IP addresses
+    5. Media API - allows different media to be played and controlled through javascript
+    6. Geolocation API - made location aware apps possible
+    
+Drawing on Canvas
+    Taking one of the APIs out for a drive -- the canvas API
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Canvas</title>
+            <style>
+                #myCanvas
+                {
+                    <!-- this shows the canvas because it is by default white -->
+                    background-color: #ccc;
+                }
+                </style>
+                <script>
+                window.onload = function()
+                {
+                    <!-- 
+                        first line is getting the canvas from the document, we're calling it canvas from the myCanvas
+                        and is what we are drawing on
+                        second line is setting it to a 2d context
+                        third line is setting fill style to the color blue
+                        fourth line is creating the rectangle calling for rectangle asking where we are starting it (over 50 pixels down 50 pixels) then showing the size 100x100
+                        fifth line is starting a line at a certain point
+                        seventh line is where the line goes to
+                        last line is the stroke type of the line
+                    var canvas = document.getElementById('myCanvas');
+                    var context = canvas.getContext("2d");
+                    context.fillStyle = "#0000FF";
+                    context.fillRect(50,50, 100, 100);
+                    context.moveTo(250, 75);
+                    context.lineTo(390, 300);
+                    context.stroke();
+                }
+        </head>
+        <body>
+            <canvas id="myCanvas" width="400" height="400"></canvas>
+        </body>
+    </html>
+    
+
+                
 
         
