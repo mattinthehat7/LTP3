@@ -33,3 +33,37 @@ Meta Tags
     </html>
     
     GOOGLE has a page that will show you what meta tags it uses to crawl websites -- meta tags that google understands
+    
+Inserting External Javascript Code
+    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Javascript Insert</title>
+            <script>
+                <!-- this is an alert when the page loads in between script tags; the script tag tells the browser to use javascript -->
+                window.onload = function()
+                {
+                alert("Hello! Greetings");
+                }
+            </script>
+        </head>
+        <body>
+        </body>
+    <html>
+    
+    
+Inserting an external library to make mobile optimization called JQUERY
+        
+        You can do externally hosted copy and paste -- you will see script source
+        Copy and paste all three from jquery mobile .com
+        These are javascript libraries and hosted css -- downside is that app must be on the internet to work
+        
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+Search Engine Readiness
+    
+
+        
