@@ -1,1 +1,98 @@
-Where to Style
+Where to Style (CSS Cascading Style Sheets)
+
+    If you don't use specify CSS it uses default CSS
+
+    Three types
+
+    Inline
+    Head
+    External (MOST COMMON -- use link element)
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Where to put CSS</title>
+            <!-- THIS IS IN THE HEAD CSS -->
+
+            <style>
+                h1 {
+                    color: #cc0000;
+                    font-size: 3em;
+                    font-family: Arial;
+                }
+
+                p   {
+                    font-family: Arial;
+                }
+            </style>
+
+
+        </head>
+        <body>
+
+            <!-- THIS BELOW IS INLINE CSS (this is not recommended, because it is hard to edit and keep your content consistent)
+            One exception is HTML emails, you can't use an external style sheet
+            *2em = 2x size-->
+
+            <!-- INLINE CSS this will only effect this particular element within which the style attribute appears -->
+            <h1 style="font-size: 4em;"> HTML5 Specialist Program</h1>
+            <p> text </p>
+        </body>
+    </html>
+
+    TO DO EXTERNAL
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>External CSS</title>
+            <link href="6_styles.css" rel="stylesheet">
+        </head>
+        <body>
+        </body>
+    <html>
+    
+CSS SELECTORS
+    Able to select multiple elements for styling (tag selectors = use specific tag i.e. h1)
+    Custom Class - use a . before (can be used multiple times)
+    ID Selector (used once and only once on page) use a # before
+    
+    CAN COMBINE SELECTORS BY ADDING A COMMA
+    i.e.
+    
+    h1, p, .emphasize {
+        color: red;
+    }
+    
+    
+    <style>
+        h1 {
+        font-size: 3.5em;
+        }
+        
+        p {
+            font-family: arial;
+            font-size: .9em;
+        }
+        
+        span {
+            font-weight: bold;
+        }
+        
+        <!-- WHEN USING A CUSTOM CLASS YOU START WITH A DOT
+        CAN GIVE OTHER ELEMENTS THE CLASS TOO -->
+        
+        .emphasize {
+            color: #cc0000;
+        }
+        
+        #open {
+            border: 2px solid #0000cc;
+            padding: 5px;
+        }
+    </style>
+    
+    <span class="emphasize"> Text </span>
+    <div id="open">
+    
+    </div>
