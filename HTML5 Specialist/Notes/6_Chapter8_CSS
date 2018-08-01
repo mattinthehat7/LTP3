@@ -1,0 +1,269 @@
+Where to Style (CSS Cascading Style Sheets)
+
+    If you don't use specify CSS it uses default CSS
+
+    Three types
+
+    Inline
+    Head
+    External (MOST COMMON -- use link element)
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Where to put CSS</title>
+            <!-- THIS IS IN THE HEAD CSS -->
+
+            <style>
+                h1 {
+                    color: #cc0000;
+                    font-size: 3em;
+                    font-family: Arial;
+                }
+
+                p   {
+                    font-family: Arial;
+                }
+            </style>
+
+
+        </head>
+        <body>
+
+            <!-- THIS BELOW IS INLINE CSS (this is not recommended, because it is hard to edit and keep your content consistent)
+            One exception is HTML emails, you can't use an external style sheet
+            *2em = 2x size-->
+
+            <!-- INLINE CSS this will only effect this particular element within which the style attribute appears -->
+            <h1 style="font-size: 4em;"> HTML5 Specialist Program</h1>
+            <p> text </p>
+        </body>
+    </html>
+
+    TO DO EXTERNAL
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>External CSS</title>
+            <link href="6_styles.css" rel="stylesheet">
+        </head>
+        <body>
+        </body>
+    <html>
+    
+CSS SELECTORS
+    Able to select multiple elements for styling (tag selectors = use specific tag i.e. h1)
+    Custom Class - use a . before (can be used multiple times)
+    ID Selector (used once and only once on page) use a # before
+    
+    CAN COMBINE SELECTORS BY ADDING A COMMA
+    i.e.
+    
+    h1, p, .emphasize {
+        color: red;
+    }
+    
+    
+    <style>
+        h1 {
+        font-size: 3.5em;
+        }
+        
+        p {
+            font-family: arial;
+            font-size: .9em;
+        }
+        
+        span {
+            font-weight: bold;
+        }
+        
+        <!-- WHEN USING A CUSTOM CLASS YOU START WITH A DOT
+        CAN GIVE OTHER ELEMENTS THE CLASS TOO -->
+        
+        .emphasize {
+            color: #cc0000;
+        }
+        
+        #open {
+            border: 2px solid #0000cc;
+            padding: 5px;
+        }
+    </style>
+    
+    <span class="emphasize"> Text </span>
+    <div id="open">
+    
+    </div>
+    
+Fundamental Typography with CSS
+    
+    <style>
+        h1 {
+            color: #c3210a;
+            
+            <!-- problem is user must have that font available so set up fall back -->
+            
+            font-family: Arial, Verdana, sans-serif;
+            
+            <!-- can use pt, px (unusual), em -->
+            
+            font-size: 3em;
+            
+            <!-- small caps is a smaller capital letters for the lower case letters; font variants are effects can use normal or small caps -->
+            font-variant: small-caps;
+        }
+        
+        .emphasize {
+            font-style: italic;
+            
+            <!-- font weight is the boldness of the font; most browsers do not support the numbers, so use bold instead -->
+            
+            font-weight: bold;
+            
+        p {
+            line-height: 30px; <!-- useful if you have a certain amount of space to fit on page -->
+        }
+        
+        
+    Understanding the CSS Box Model
+        
+        Everything that is placed in a web-browser is placed in a box
+            Margin
+            Border
+            Padding
+            Inside
+            
+        Can control the width with the CSS Style
+        
+        <style>
+        #open {
+            width: 400px; <!-- total width of the content box -->
+            padding: 10px; <!-- can be added on all four sides ; note that the h1 has it's own padding and there is also some padding for the paragraph tag, now will be total width of 420px adding padding and margin it changes the width of the total box -->
+            
+            <!-- can change on left right top or bottom -->
+            
+            padding-left: 40px;
+            padding-top: 30px;
+            
+            <!-- border wants size, style, and color -->
+            
+            border: 5px solid #0000cc;
+            
+            <!-- or NOTE THAT THIS ADDS TO THE TOTAL BOX WIDTH -->
+            
+            border-bottom: 5px solid #0000cc;
+            
+            <!-- margin between your box and the next box or the edge of the browser window; can set for individual sides or all with margin: -->
+            
+            margin-left: 100px;
+            margin-top: 100px;
+            
+            background-color: #ccc;
+            
+            <!-- browser by default has a 3px margin SO YOU CAN SET THE BODY MARGIN = 0px -->
+        }
+        
+        body {
+            margin: 0px;
+        }
+        </style>
+        
+        <div id="open">
+        <h1> TEXT </h1>
+        <p> TEXT </h1>
+        
+    Floating your layout
+        
+        Whenever doing page layout recommend doing container div that holds everything to make things easier -- goal is to put the 3 divs in columns - can use content to mark the end of specific divs
+        
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>Floats</title>
+                <style>
+                    body 
+                    {
+                        margin: 0px;
+                    }
+                    
+                    <!-- #container is the div id we made to encoupass the whole page -->
+                    
+                    #container <!-- this will set the whole page div to 100% width -->
+                    {
+                        width:100%;
+                        padding: 10px;
+                    }
+                    
+                    p
+                    {
+                        font-family: Arial;
+                        font-size: .9em;
+                    }
+                    
+                    <!-- leave a couple % buffer -->
+            
+                    #content1
+                    {
+                        width: 25%;
+                        float: left;
+                        padding-right: 5px;
+                    }
+                    
+                    #content2
+                    {
+                        width:48%;
+                        float: left;
+                        border-left: 1px solid black;
+                        border-right: 1px solid black;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                    
+                    #content3
+                    {
+                        width: 25%;
+                        float: left;
+                        padding-left: 5px;
+                    }
+                    
+                    <!-- floating breaks the normal stacking rules of CSS so need to clear the floats -->
+                    
+                    footer
+                    {
+                        clear: both;
+                    }
+                    
+                </style>
+            </head>
+            <body>
+                <div id="container">
+                    <header>
+                        <h1>LearnToProgram News & Notes</h1>
+                    </header>
+                    <div id="content1">
+                        <h2>Web Dev News Notes</h2>
+                        <p>TEXT</p>
+                    </div> <!-- Content1 END -->
+                    
+                    <div id="content2">
+                        <h2>LearnToProgram Media Buys Google</h2>
+                        <p>TEXT</p>
+                    </div> <!-- Content 2 END-->
+                    
+                    <div id="content3">
+                        <h2> REO Speedwagon Rules!</h2>
+                        <p> TEXT </p>
+                    </div> <!-- Content 3 END -->
+                    <footer>
+                        <p> Copyrifht &copy;2016</p>
+                    </footer>
+                </div>
+                
+                <!-- Container-->
+            </body>
+        </html>
+                        
+        
+        

@@ -1,0 +1,32 @@
+Demonstrating Responsive Design
+    Can use developer tools in chrome, can add custom devices or devices not listed with edit button
+    
+Using a responsive stylesheet
+    
+    GetSkeleton is a good framework which provides a framework and a starting point -- divides site or page into a grid of 12 possible columns with a maximum width of 960px
+    
+    Also has other features to style typography, buttons, forms, lists, etc
+    
+    Purpose is to make sure elements look good with other size screen
+    
+    Offers index page and CSS
+    
+    Look at div class row and column
+    
+Respsonsive Headers
+
+    Most mobile browsers default to a full-width browser window (960px) -- To avoid that problem we use a viewport metatag
+    
+    THE VIEWPORT is the visible space in the visible space in the browser window through which you can see the content
+    
+    <head>
+        <title> VIEWPORT </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
+        
+        <!-- ABOVE PREVENTS USER FROM PINCHING THE PAGE -->
+        
+DOWNLOADS
+
+    GETSKELETON
+
+    FOUNDATION.ZURB.COM

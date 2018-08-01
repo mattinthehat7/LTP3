@@ -1,0 +1,40 @@
+#body {
+    margin: 0px;
+}
+
+#container {
+    width: 100%;
+    padding: 0px;
+    border: 1px solid black;
+}
+
+#secondary {
+    float: left;
+    width: 25%;
+    padding-right: 10px;
+}
+
+#primary {
+    float: left;
+    width: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+#moreSecondary {
+    float: left;
+    width:25%;
+    padding-left: 10px;
+
+    
+}
+#footer {
+    clear: both;
+    background-color: black;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
