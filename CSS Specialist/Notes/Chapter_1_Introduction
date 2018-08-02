@@ -1,0 +1,56 @@
+Hello World Example
+    Place in between <style> </style> in the head <!-- see Ch_1 Document -->
+    
+CSS Intro/tools
+    CSS Stands for Cascading Style Sheets
+    Recommended using brackets.io
+    
+CSS Format
+    Style goes in the head
+    
+    <style>
+        
+        <!-- CSS rules: Selector, property, value -->
+        <!-- Selector tells you which rules you are going to modify (h1)
+        then add {} -- inside curly brackets are the rules, property (background color) value (green) -->
+        
+        h1 {
+            background-color: green;
+            color: white;
+        }
+        
+        p {
+            color: pink;
+        }
+        
+    </style>
+    
+Colors in CSS
+    Three main ways to represent colors in CSS
+    <!-- within the style tags is called internal linking -->
+    
+    <style>
+    
+    h1 {
+        <!-- examples of three ways 1. name of color 2. rbg 3. hexidecimal (go from 0-9 and then from a - f -- so f is the highest, 0 is the lowest - 000000 is black and ffffff is white, ff0000 is full red) -->
+        
+        background-color: crimson;
+        
+        background-color: rgb(255,0,0); <!-- 0,0,0 = black 255 is the highest value can hover over color with brackets to see preview of color-->
+        
+        background-color: #8f00ff
+    }
+    
+    </style>
+    
+Comments in CSS
+    HTML COMMENT
+        <!-- COMMENT EXAMPLE -->
+        Won't show up anywhere in a browser will only see if they go into the source code and look for it
+        
+    CSS COMMENT
+        Within the style section
+        /* COMMENT EXAMPLE */
+        
+    Another use of comments is to disable a bit of code temporarily - useful for debugging
+    
