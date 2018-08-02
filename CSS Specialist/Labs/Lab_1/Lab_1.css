@@ -2,12 +2,12 @@
 h1, h2, h3, h4, h5, h6 {
     background-color: lightblue;
 }
-/* This is the ancestor-descendent portion */
+/* This is the ancestor-descendent portion i.e. only <p> tags that are a descendent of a <ul> tag */
 ul p {
     background-color: yellow;
 }
 
-/* This is the parent-child portion */
+/* This is the parent-child portion i.e. only <a> tags that are the child of a <p> tag */
 
 p>a {
     background-color: orange;
