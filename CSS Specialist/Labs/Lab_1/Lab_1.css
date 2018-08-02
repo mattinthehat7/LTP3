@@ -1,0 +1,20 @@
+/* This is multiple selectors */
+h1, h2, h3, h4, h5, h6 {
+    background-color: lightblue;
+}
+/* This is the ancestor-descendent portion */
+ul p {
+    background-color: yellow;
+}
+
+/* This is the parent-child portion */
+
+p>a {
+    background-color: orange;
+}
+
+/* This is the class example */
+
+.uscity {
+    color: green;
+}

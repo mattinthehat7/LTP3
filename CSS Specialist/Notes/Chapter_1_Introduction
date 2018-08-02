@@ -54,3 +54,146 @@ Comments in CSS
         
     Another use of comments is to disable a bit of code temporarily - useful for debugging
     
+Complex Selectors
+    
+    Multiple Selectors 
+        Example 1
+
+        <style>
+
+        h1 {
+            background-color: lightblue;
+        }
+
+        p {
+            background-color: lightblue;
+        }
+
+        </style>
+
+        Example 2: Multiple Selectors
+
+        h1, p {
+            background-color: lightblue;
+        }
+        
+    Ancestor-Descendent Relationship in HTML and CSS
+        This is the tag heirarchy is HTML
+        
+        <style>
+        
+            /* all paragraph tags that are a descendent of the unordered list tag get the following rule */
+            
+            ul p {
+                background-color: yellow;
+            }
+        
+        </style>
+        
+        <ul>
+            <li><p>Paragraph 1</p></li>
+            <li><p>Paragraph 2</p></li>
+            <li><p>Paragraph 3</p></li>
+            <li><a>Anchor</a></li>
+        </ul>
+        
+    Parent-Child Relationship
+        
+        /* want a tag to be purple but don't want any other a tags to be changed */
+        /* all a tags that happen to be a child of a parent p tag will be purple */
+        
+        p>a {
+            background-color: purple;
+        }
+        
+        
+        <p>Here is a link to my favorite search engine: <a href="https://google.com>GOOGLE</a></p>
+        
+        /* The a tag is the child of the parent p tag - can also describe as ancestor and descendent but parent child relationship is more specific because it only refers to 1 DEGREE OF SEPARATION */
+        
+    ID and Class Selectors
+        
+        Class Selectors are used to create custom styles that you may want to apply to multiple elements on the page
+        
+            Example:
+
+            Apply to all headers
+
+            <style>
+
+            /* starting with a period (.) represents a class */
+
+            .headerstyle {
+                background-color: lightgreen;
+            }
+
+            .headertextcolor {
+                color: white;
+            }
+
+            </style>
+
+            <h1 class="headerstyle"> TEXT </h1>
+            <h3 class="headerstyle"> TEXT </h1>
+            <p class="headerstyle"> TEXT </p>
+
+            Can apply the class you create to as many as you want and can apply multiple classes to one element by using a space between classes, for example:
+
+            <p class="headerstyle headertextcolor"> TEXT </p>
+        
+        ID Selectors 3 differences: 
+            i) are only paired to one specific element 
+            ii) each element can only have one ID selector, can only apply one id selector per element 
+            iii) have higher priority than class selectors, so if there is a conflict the id selector will win
+            
+            Use a pound sign for an ID Selector
+            
+            <style>
+            
+            #mostimportantinfo {
+                background-color: lightpink;
+                text-color: darkred;
+            }
+            
+            </style>
+            
+            <h1 id="mostimportantinfo"> TEXT </h1>
+            
+3 Methods of Linking CSS
+    
+    1. External CSS
+        Create external css file - must add .css at the end of the file to tell the computer that it is a css file
+        
+        In HTML header add a link tag (link is tag, href is a attribute)
+        
+        /* Note: Link tags don't have a closure slash */
+        
+        <link rel="stylesheet" href="mycss.css">
+    
+    2. Internally Linked CSS
+        
+        /* good when you have a website with many pages and you just want to have specific CSS on one page */
+    
+        Style tags in the header
+            <style>
+                h1 {
+                    background-color: red;
+                }
+            </style>
+    
+    3. Inline CSS linking - apply styles and CSS rules to one specific element on the page
+    
+    <ol>
+        <li>Green</li>
+        <!--can do multiple styles by using a space after the semi-colon-->
+        <li style="background-color:blue; color:white;">Organge</li>
+    </ol>
+    
+CSS3 New Features
+    CSS website is www.w3.org --> the world wide web consortium --> large group that comes up with recommendations that web developers should follow so websites can be standardized and viewable
+
+    Can see which state the modules are in on the website (release vs. prerelease, etc.)
+    
+    
+        
+        
