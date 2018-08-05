@@ -3,5 +3,287 @@ Chapter 2 Intro, Styling Specific elements
     
 Styling Text
     
+    White-space, Text-Align, Text-Decoration
+    
+    <style>
+        
+        .poem {
+        
+        /*white-space property
+            normal (condenses all white space down to one single space)
+            text-wrapping (if it won't fit in the page it will wrap it down)
+            pre (preserve - will preserve the white spaces and tabs and returns as you typed them )
+            
+            if you also want both can do pre-wrap
+        */
+        
+            white-space: pre-wrap; 
+        
+            text-align: center; [left, center right]
+            
+            text-decoration: underline; [overline, line-through]            
+        }
+    
+    </style>
+    
+    <p class="poem>
+        TEXT
+    </p>
+    
+Fonts In CSS
+    Font-weight, font-style, font-family, font-size
+    
+    <style>
+        
+        .testparagraph {
+            font-weight: bold; /* can do numbers too */
+            font-style: italic;
+            font-family: "Arial", "sans-serif"; /* will only work if they have the font saved on their computer; set a secondary font or font-family */
+            font-size: 28px; /* can also use em */
+        }
+    
+    </style>
+    
+    
+    <p class="testparagraph">
+    
+Web Fonts
+    /* www.w3schools.com/csref/css_websafe_fonts.asp */
+    
+    Google fonts --> 
+    
+    <head>
+        <title> title </title>
+        <link href='https://fonts.googleapis.com/css?family=Oswald'rel='stylesheet' type='text/css'>
+    </head>
+    
+    <style>
+    
+        .testparagraph {
+            font-family: Oswald;
+        }
+    
+    </style>
+    
+    <p class="testparagraph"> TEXT </p>
+    
+Styling Tables and Lists
+    
+    
+    <style>
+    
+        #table_style {
+            border: 1px solid black; [width, style, color, table only will do outside of table]
+            border-collapse: collapse; [if there are more than one border touching then it will get rid of them until there is one]
+            background-color: bisque;
+        }
+        
+        /* this is the descendent-ancestor relationship */
+        
+        #table_style th {
+            border: 1px solid black;
+            padding: 10px; [will give 10px around in every direction of the text]
+            color: darkviolet;
+        }
+        
+        #table_style td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+        #ul_1 {
+            list-style-position: inside; [bullet point is considered part of the text, so it is centered based on the middle of the entire thing]
+            list-style-type: circle;
+        }
+        
+        #ul_2 {
+            list-style-position: outside; [bullet point is not considered part of the text, only the text is centered]
+            list-style-type: square;
+        }
+        
+        #ol_1 {
+            list-style-position: inside;
+            list-style-type: upper-roman;
+        }
+        
+        #ol_2 {
+            list-style-position: outside;
+            list-style-type: lower-alpha;
+        }
+        
+    
+    </style>
+    
+    
+    <table id="table_style">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Job</th>
+            <th>2 Favorite Colors</th>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>25</td>
+            <td>Carpenter</td>
+            <td><ul id="ul_1">
+                    <li>red</li>
+                    <li>blue</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>38</td>
+            <td>Writer</td>
+            <td><ul id="ul_2">
+                    <li>pink</li>
+                    <li>green</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Greg</td>
+            <td>61</td>
+            <td>Truck Driver</td>
+            <td><ol id="ol_1">
+                    <li>yellow</li>
+                    <li>red</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>49</td>
+            <td>Doctor</td>
+            <td><ol id="ol_2">
+                    <li>purple</li>
+                    <li>orange</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+    
+Background Image Styling
+    
+    <link rel="stylesheet" href="test.css">
+    
+    /* below will be example CSS */
+    
+    .main_body {
+        width: 1000px;
+        height: 600px;
+        
+        /* must use full file path and use correct capitalization and spelling */
+        
+        background-image: url('images/fuzzball.jpg')
+        
+        /* must include two values for background size (x value and y value); the default is the image native size */
+        /* auto auto is the default x and y; can do actual pixel values ex (50px 250px); can use percentages (100% 50%) <-- that's width then height, will be percentages of the element size which we set above in width and height in main body (1000px and 600px) */
+        
+        background-size: 100% 50%;
+    }
+    
+    
+    /* new example */
+    
+    .main_body {
+        width: 1000px;
+        height: 600px;
+        
+        /* this is for multiple images */
+        
+        background-image: url('Images/partial_bkg.png'), url('Images/gradient_bkg.png);
+        
+        /* you need to specify two values each for the two images we are using separated by a comma can do: (no-repeat (only show up once), repeat (the default), repeat-x only in horizontal), repeat-y only in vertical */
+        
+        /* go in the same order that you listed the images earlier in the background image url
+        
+        background-repeat: no-repeat, repeat-x;
+        
+        /* to adjust the position of background image use background-position property (values need to be set separately for each image and each takes two values, an x value and a y value), you can type them in or do the presents (example: right bottom), separate with a comma for next image */
+        
+        background-position: right bottom, left top;
+    }
+    
+    h1 {
+        color: lightblue;
+        font-size: 50px;
+    }
+    
+    /*above will be example CSS */
+    
+    <body class="main_body">
+    
+    <h1> Welcome to my new website </h1>
+    
+    </body>
+    
+The Sliding Door Technique Part One
+    
+    Trick that you can use to have elements be resized but look good no matter what size you make it
+    
+    /*there is a left end cap and a middle section and then cut off and then there is a button normal right - the sliding door technique makes the right end cap slide to adjust based on how much of the other image is needed for the text that we add; the max size is limited by the largest image though */
+    
+    <link rel="stylesheet" href="myCSS.css">
+    /* CSS BELOW */
+    
+    /* this is a tags with the class button rules! */
+    
+    a.button {
+        height:30px; /*fixed veritcal height because it is 30px tall */
+       
+        background-color: transparent; /* we don't want any background color to interfere, everything will be see through except for the button image we will be adding */
+        
+        background-image: url('images/button_normal_right.png');
+        background-repeat: no-repeat;
+        background-position: top right; /* b/c this is the right cap */
+        float: left; /* want to float so that it won't be cut off after the text ends it will float over, left is to start it at the correct position */
+        display: block; /* display as a block like a p tag and then everything is up above it before it or down below it after it */
+        
+        /* only one value needed instead of 0px 10px 0px 0px */
+        
+        padding-right: 10px; /* will have 10 more pixels will have to display, after the span ends, so this will elongate the available area in the a tag */
+    }
+    
+    a.button span {
+    background-color: transparent;
+    background-image: url('images/button_normal_left.png");
+    line-height: 20px; /* to give the height of the text, give a little room on the top and the bottom of the button for the text */
+    display: block;
+    
+    /* padding has four values starts with top and then goes clockwise, T, R, B, L */
+    
+    padding: 5px 0px 5px 10px; (the top and bottom give space to the text, and the left will push the text a bit over within the button) 
+    
+    
+    }
+    
+    Can make states with links (clicked, or visited), hover state (when user hovers over the button), can make specific css rules for all these states
+    
+    /* THIS IS CREATING A STATE */
+    
+    a.button:hover {
+        background-image: url('images/button_hover_right.png);
+    }
+    
+    a.button span:hover {
+        background-image: url('images/button_hover_left.png);
+    }
+    
+    <body>
+        
+        <!-- use the a anchor tag and add to a call we called button, we added an href where normally we would put the url or the name of another html file but if you just put the pound sign, all the button does is scroll up to the very top of the page! -->
+        
+        <!-- for sliding door we will be using two tags, the whole left endcap and middle will be a background image for the span tag, and the right endcap will be a background image for the a tag, so any background image we give to the span tag can't be larger than the a tag
+        
+        <a class="button" href=#><span> Button that is clickable</span></a>
+        
+    </body>
+    
+
+Using Sprite Sheets
+    
+                
     
     
