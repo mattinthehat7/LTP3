@@ -68,7 +68,7 @@ Web Fonts
     <p class="testparagraph"> TEXT </p>
     
 Styling Tables and Lists
-    
+    Note can use <ol reversed> in html to reverse the order of a list
     
     <style>
     
@@ -283,7 +283,262 @@ The Sliding Door Technique Part One
     
 
 Using Sprite Sheets
+    Image file that has a bunch of smaller images within it -- only display a small portion of the image at a time, and they will display separately, can save some bandwith because you are only loading one image technically -- can make some animated hover titles with one image
     
+    Utilize a transparent placeholder that is the same as the individual sections of the sprite sheet that you want to use
+    
+    The placeholder is like a window that is only large enought to show one of the images at a time based on where you start the image based on pixel positioning
+    
+    <link rel="stylesheet" href="myCSS.css">
+    
+    /* CSS HERE */
+    
+    
+    #title {
+        background: url('images/animated_sprite.png') 0px 0px;
+    }
+    
+    #title:hover {
+        background: url('images/animated_sprite.png') -300px 0px;
+    }
+    
+    .chrome .sprite {
+        background: url('images/sprite_sheet.png') -330px 0px;
+    }
+    
+    .ie .sprite{
+        background: url('images/sprite_sheet.png') 0px 0px; /* This will display 110 by 110 pixels because that is the size of the logo
+    }
+    
+    .safari .sprite {
+        background: url('images/sprite_sheet.png') -220px 0px;
+    }
+    
+    .firefox .sprite {
+        background: url('images/sprite_sheet.png') -110px 0px; /*needs to have - sign because it is scooting over to the left */
+    }
+    
+    .opera .sprite {
+        background: url('images/sprite_sheet.png') -440px 0px;
+    }
+    
+    
+    /* CSS ENDS */
+    
+    
+    <body>
+    
+    NOTE THAT WE ARE USING THE PLACEHOLDERS HERE IN THE HTML BODY -- we have the div class and then an sprite image tag so we can modify them in all one place, and we use the placeholders because if we used the sprite sheet it would load the larger size 5 logo wide image, it's much easier to have a placeholder like this it's already sized to the right size and width, it's easy to use the placeholders -- they are basically there to set the height and width
+    
+    <img id="title" src="images/sprite_placeholder2.png" />
+    
+    <div class="chrome"> Chrome:
+        <img class="sprite" src="images/sprite_placeholder.png" />
+    </div>
+    
+    <div class="ie"> IE:
+        <img class="sprite" src="images/sprite_placeholder.png" />
+    </div>
+    
+    <div class="safari"> Safari:
+        <img class="sprite" src="images/sprite_placeholder.png" />
+    </div>
+    
+    <div class="firefox"> Firefox:
+        <img class="sprite" src="images/sprite_placeholder.png" />
+    <div>
+    
+    <div class="opera"> Opera:
+        <img class="sprite" src="images/sprite_placeholder.png" />
+    </div>
+    
+    </body>
+    
+
+Creating a Drop Down Logo With CSS Part 1
+    Steps: Create a list, put the list in a table, put the table in a div tag so we can easily work with it in the CSS code, add div tags to surround each of the individual lists. 
+    
+    Then use css to hide the content until the user hovers over the label at the top
+    
+    <link rel="stylesheet" href="myCSS.css">
+    
+    /* START CSS */
+    
+    /* this is ancestor descendent relationship so any ul contained within the submenu in the mymenu - this will hide by default the list but not the title */
+    
+    #mymenu .submenu ul {
+        display: none;
+    }
+    
+    /* this will show the ul list items when the submenu is hovered over */
+    
+    #mymenu .submenu:hover ul{
+        display: block; /* a block element occupies the entire space of it's parent element (container) */
+    }
+    
+    /* END CSS */
+    
+    
+    <body>
+        <div id="my_menu">
+            <table>
+                <tr>
+                    <td>
+                        <div class="submenu">
+                            Names
+                            <ul>
+                                <li>Andrew</li>
+                                <li>Billy</li>
+                                <li>Raymond</li>
+                                <li>Nicole</li>
+                                <li>Jim</li>
+                                <li>Alex</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="submenu">
+                            Colors
+                            <ul>
+                                <li>Orange</li>
+                                <li>Blue</li>
+                                <li>Purple</li>
+                                <li>Green</li>
+                                <li>Pink</li>
+                                <li>Yellow</li>
+                                <li>Brown</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="submenu">
+                            Animals
+                            <ul>
+                                <li>Cat</li>
+                                <li>Horse</li>
+                                <li>Dog</li>
+                                <li>Pig</li>
+                                <li>Bird</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>    
+            </table>
+        </div>
+    </body>
+    
+    
+Creating a Drop Down Menu with CSS Part 2
+    
+    First step to making this more professional and stylized. Remove two of the rows because it would be better if they were across so it looks like a menu bar at the top of the page. 
+    
+    Now when hovering the elements will move around inappropriately so we will need to change the position to fixed.
+    
+    Add some color to titles
+    
+    Positioning is not correct at this point so we need to change the padding for the table data tags
+    
+    Add some color to dropdowns
+    
+    Lets remove the bullet points (list style type none) and adding a border (we don't want a top border so we will use left, right, and bottom (need width, style, color))
+    
+    Now will need to use margin property to get rid of the white space on the top because automatically the unordered lists add some white space at the top so set margin on top to zero
+    
+    Now will need to make sure that the text is centered correctly and get the spacing correctly so add padding to the #mymenu .submenu ul unordered list
+    
+    Should I think about positioning of the bullet points?
+    
+    <link rel="stylesheet" href="myCSS.css">
+    
+    /* START CSS */
+    
+    /* this is ancestor descendent relationship so any ul contained within the submenu in the mymenu - this will hide by default the list but not the title */
+    
+    #mymenu .submenu ul {
+        display: none;
+        position: fixed;
+        background-color: lightblue;
+        list-style-type: none;
+        border-left: 3px solid lightsalmon; /* want to make same as top menu bar to make it seem like it is popping out of it */
+        border-right: 3px solid lightsalmon;
+        border-bottom: 3px solid lightsalmon;
+        margin-top: 0px;
+        padding: 10px;
+    }
+    
+    /* this will show the ul list items when the submenu is hovered over */
+    
+    #mymenu .submenu:hover ul{
+        display: block; /* a block element occupies the entire space of it's parent element (container) */
+    }
+    
+    #my_menu {
+        background-color: lightsalmon;
+    }
+    
+    #my_menu td{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    /* END CSS */
+    
+    
+    <body>
+        <div id="my_menu">
+            <table>
+                <tr>
+                    <td>
+                        <div class="submenu">
+                            Names
+                            <ul>
+                                <li>Andrew</li>
+                                <li>Billy</li>
+                                <li>Raymond</li>
+                                <li>Nicole</li>
+                                <li>Jim</li>
+                                <li>Alex</li>
+                            </ul>
+                        </div>
+                    </td>
+    
+                    <td>
+                        <div class="submenu">
+                            Colors
+                            <ul>
+                                <li>Orange</li>
+                                <li>Blue</li>
+                                <li>Purple</li>
+                                <li>Green</li>
+                                <li>Pink</li>
+                                <li>Yellow</li>
+                                <li>Brown</li>
+                            </ul>
+                        </div>
+                    </td>
+                
+                    <td>
+                        <div class="submenu">
+                            Animals
+                            <ul>
+                                <li>Cat</li>
+                                <li>Horse</li>
+                                <li>Dog</li>
+                                <li>Pig</li>
+                                <li>Bird</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>    
+            </table>
+        </div>
+    </body>
                 
     
     
