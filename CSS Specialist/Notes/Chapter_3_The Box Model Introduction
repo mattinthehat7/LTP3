@@ -1,0 +1,20 @@
+The Box Model Introduction 
+    In HTML each element is treated like a box with dimension and the end product is boxes together
+    
+    created an image with a class 
+        <img src="image.jpg" class="image />
+    
+    In CSS
+    
+    .image {
+        background-color: green;
+        float: left;
+        
+        width: inherit; /* inherit means that it takes the actual height and width of the image file -- don't always want to use inherit */
+        height: inherit;
+        
+        padding: 5px 5px 5px 5px; /* remember clockwise starting at the top */
+        border: 5px solid black; /*require three different values [width, style, color]
+        margin: 10px 10px 10px 10px; /* will be transparent extra space between this image and anything else -- margin is outside of the border */
+        outline: 20px solid red; /* requires three values same as border - NOTE THE OUTLINE DOES NOT CHANGE ANY OF THE OTHER ELEMENTS doesn't modify the positioning of any other elements on the page */
+    }
